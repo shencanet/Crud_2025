@@ -59,11 +59,11 @@ php artisan db:seed
 php artisan serve
 
 
-| Módulo                     | Descripción                                                                 |
+| Módulo                    | Descripción                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
 | Introducción a Laravel    | Arquitectura del framework, instalación y entorno de desarrollo inicial     |
 | Operaciones CRUD          | Creación de rutas, controladores y vistas para crear, leer, actualizar y eliminar datos |
-| Buenas prácticas          | Seguridad, eficiencia y mantenibilidad del código                          |
+| Buenas prácticas          | Seguridad, eficiencia y mantenibilidad del código                           |
 | Optimización              | Caché de rutas y vistas, configuración para producción                      |
 | Despliegue en producción  | Uso de cPanel, configuración de base de datos y entorno de hosting          |
 | Herramientas adicionales  | Otras prácticas y herramientas complementarias útiles                       |
