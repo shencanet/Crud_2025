@@ -67,6 +67,7 @@ php artisan serve
 | Optimización              | Caché de rutas y vistas, configuración para producción                      |
 | Despliegue en producción  | Uso de cPanel, configuración de base de datos y entorno de hosting          |
 | Herramientas adicionales  | Otras prácticas y herramientas complementarias útiles                       |
+|---------------------------|-----------------------------------------------------------------------------|
 
 ---
 
