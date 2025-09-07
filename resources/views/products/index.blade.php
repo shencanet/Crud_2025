@@ -5,6 +5,8 @@
 </head>
 <body>
     <h1>Lista de Productos</h1>
+    <button type="submit" onclick="return confirm('¿Estás seguro de que deseas crear este producto?')">crear</button>
+
     @if (session('success'))
         <div style="color: green;">
             {{ session('success') }}
