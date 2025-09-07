@@ -38,23 +38,36 @@ class ProductController extends Controller
     }
 
 
-    public function show(string $id)
+    public function show(Product $product)
     {
-        //
+        //ver un producto
+        
+
+        return view('products.show', compact('product')); // Retorna la vista con los detalles del producto
+
+
+
     }
 
 
-    public function edit(string $id)
+    public function edit(Product $product)
     {
-        //
+        //editar un producto
+        return view('products.edit', compact('product')); // Retorna la vista para editar el
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Product $product)
     {
-        //
+                $request->validate([
+            'name' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'description' => 'nullable|string',
+        ]);
+        $product->update($request->all());
+        return redirect()->route('products.index')->with('success', 'Producto actualizado exitosamente.');
     }
 
     /**
@@ -63,5 +76,9 @@ class ProductController extends Controller
     public function destroy(string $id)
     {
         //
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('products.index')->with('success', 'Producto eliminado exitosamente.');
+        
     }
 }
